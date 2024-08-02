@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuxhpb1swvpj5"]
+
+[ext_resource type="Texture2D" uid="uid://bt20l3fkn8ai8" path="res://assets/sprites/bang.svg" id="1_sogfw"]
+[ext_resource type="Texture2D" uid="uid://nb32ts7hvfw7" path="res://assets/sprites/bang_stars.svg" id="2_1lgyk"]
+
+[sub_resource type="Animation" id="Animation_lx7no"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_tsh4n"]
+resource_name = "bang"
+length = 0.18
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_647h0"]
+_data = {
+"RESET": SubResource("Animation_lx7no"),
+"bang": SubResource("Animation_tsh4n")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_toin4"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="Bang" type="Node2D"]
+z_index = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_sogfw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_647h0")
+}
+autoplay = "bang"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+process_mode = 3
+material = SubResource("CanvasItemMaterial_toin4")
+lifetime = 36000.0
+explosiveness = 1.0
+draw_order = 1
+texture = ExtResource("2_1lgyk")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 300.0
+damping_min = 300.0
+damping_max = 400.0
+anim_offset_max = 1.0

@@ -1,0 +1,874 @@
+[gd_scene load_steps=12 format=3 uid="uid://duf3viswrbhmx"]
+
+[ext_resource type="Script" path="res://scenes/planes/garage.gd" id="1_am8pe"]
+[ext_resource type="Texture2D" uid="uid://cphb7s4cy63fg" path="res://assets/sprites/garage42.svg" id="1_qno4e"]
+[ext_resource type="Texture2D" uid="uid://dilisd2cakwkg" path="res://assets/sprites/tree_02.svg" id="1_shwlb"]
+[ext_resource type="Texture2D" uid="uid://b5e2pm6peh452" path="res://assets/sprites/wheel.png" id="2_uhs4j"]
+[ext_resource type="Texture2D" uid="uid://bqmypev07ihmv" path="res://assets/sprites/tree_01.svg" id="2_wgtdh"]
+[ext_resource type="Texture2D" uid="uid://cyg3woktk2cpd" path="res://assets/sprites/bush_02.svg" id="3_jk8p4"]
+[ext_resource type="Texture2D" uid="uid://bi2oywguuarqr" path="res://assets/sprites/vehicle.png" id="3_u63b8"]
+[ext_resource type="Texture2D" uid="uid://botpyexjq8x6j" path="res://assets/sprites/bush_01.svg" id="4_hqsih"]
+[ext_resource type="Texture2D" uid="uid://bsn7mwleiuo1v" path="res://assets/sprites/stump.svg" id="5_ujvy3"]
+[ext_resource type="Texture2D" uid="uid://b8nq60dgvs5y1" path="res://assets/sprites/mushroom_01.svg" id="6_y5hla"]
+[ext_resource type="Texture2D" uid="uid://bas3bnfi75p0o" path="res://assets/sprites/mushroom_02.svg" id="7_b6wai"]
+
+[node name="Garage" type="Node2D"]
+script = ExtResource("1_am8pe")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+modulate = Color(0.415981, 0.415981, 0.41598, 1)
+scroll_scale = Vector2(3, 0)
+ignore_camera_scroll = true
+
+[node name="Tree20" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-2165, 0)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree21" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(477, 0)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree22" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(1781, 0)
+scale = Vector2(0.545, 0.545)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree23" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-1826, 0)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree24" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-1178, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree25" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(2410, 0)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree26" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-1485, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree40" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(2996, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree27" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(931, 0)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree28" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(2130, 0)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree29" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(2732, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree30" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(3218, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree31" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-2951, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree32" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-474, 0)
+scale = Vector2(0.57, 0.57)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree33" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-755, 0)
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree34" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(1585, 0)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree35" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(1374, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree36" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-3324, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree39" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-2571, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree37" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-28.9993, 0)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree38" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(192, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+modulate = Color(0.581033, 0.581033, 0.581033, 1)
+scroll_scale = Vector2(2.5, 0)
+ignore_camera_scroll = true
+
+[node name="Tree20" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-308, 0)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree21" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-714, 0)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree22" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2571, 0)
+scale = Vector2(0.545, 0.545)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree23" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2250, 0)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree24" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2066, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree25" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-1505, 0)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree26" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(493, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree40" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(3144, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree27" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(1375, 0)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree28" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(2547, 0)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree29" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(3344, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree30" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-3462, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree31" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-1848, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree32" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(878, 0)
+scale = Vector2(0.57, 0.57)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree33" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(1788, 0)
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree34" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(2177, 0)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree35" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(123, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree36" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-1030, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree39" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(2871, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree37" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-3224, 0)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree38" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2828, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Bush02" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2039, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush03" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-1518, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush04" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-375, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush05" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(622, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush06" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(2006, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush07" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(3301, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush08" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2630, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush09" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-3392, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush10" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-878, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush01" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-2966, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush11" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-1791, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush12" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-1220, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush13" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-591, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush14" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(292, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush15" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(1708, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush16" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(2343, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush17" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(2972, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Trees" type="Node2D" parent="."]
+modulate = Color(0.76662, 0.76662, 0.76662, 1)
+
+[node name="Bush17" type="Sprite2D" parent="Trees"]
+position = Vector2(-2862, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush18" type="Sprite2D" parent="Trees"]
+position = Vector2(-1777, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush19" type="Sprite2D" parent="Trees"]
+position = Vector2(-608, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush20" type="Sprite2D" parent="Trees"]
+position = Vector2(219, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush21" type="Sprite2D" parent="Trees"]
+position = Vector2(1735, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush22" type="Sprite2D" parent="Trees"]
+position = Vector2(2940, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush23" type="Sprite2D" parent="Trees"]
+position = Vector2(2498, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush24" type="Sprite2D" parent="Trees"]
+position = Vector2(826, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush25" type="Sprite2D" parent="Trees"]
+position = Vector2(1383, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush26" type="Sprite2D" parent="Trees"]
+position = Vector2(-1110, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush27" type="Sprite2D" parent="Trees"]
+position = Vector2(-2417, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Stump" type="Sprite2D" parent="Trees"]
+position = Vector2(-2898, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ujvy3")
+offset = Vector2(0, -128)
+
+[node name="Stump2" type="Sprite2D" parent="Trees"]
+position = Vector2(-1503, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ujvy3")
+offset = Vector2(0, -128)
+
+[node name="Stump3" type="Sprite2D" parent="Trees"]
+position = Vector2(593, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ujvy3")
+offset = Vector2(0, -128)
+
+[node name="Stump4" type="Sprite2D" parent="Trees"]
+position = Vector2(2826, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ujvy3")
+offset = Vector2(0, -128)
+
+[node name="Tree02" type="Sprite2D" parent="Trees"]
+position = Vector2(-1, 0)
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree18" type="Sprite2D" parent="Trees"]
+position = Vector2(-507, 0)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree09" type="Sprite2D" parent="Trees"]
+position = Vector2(-2324, 0)
+scale = Vector2(0.545, 0.545)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree16" type="Sprite2D" parent="Trees"]
+position = Vector2(-1953, 0)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree10" type="Sprite2D" parent="Trees"]
+position = Vector2(-3336, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree11" type="Sprite2D" parent="Trees"]
+position = Vector2(-1198, 0)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree12" type="Sprite2D" parent="Trees"]
+position = Vector2(826, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree13" type="Sprite2D" parent="Trees"]
+position = Vector2(1824, 0)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree14" type="Sprite2D" parent="Trees"]
+position = Vector2(2950, 0)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree03" type="Sprite2D" parent="Trees"]
+position = Vector2(3500, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_shwlb")
+offset = Vector2(0, -512)
+
+[node name="Tree01" type="Sprite2D" parent="Trees"]
+position = Vector2(-3593, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree04" type="Sprite2D" parent="Trees"]
+position = Vector2(-1626, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree05" type="Sprite2D" parent="Trees"]
+position = Vector2(1261, 0)
+scale = Vector2(0.57, 0.57)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree19" type="Sprite2D" parent="Trees"]
+position = Vector2(2302, 0)
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree06" type="Sprite2D" parent="Trees"]
+position = Vector2(2615, 0)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree15" type="Sprite2D" parent="Trees"]
+position = Vector2(370, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree07" type="Sprite2D" parent="Trees"]
+position = Vector2(-728, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree17" type="Sprite2D" parent="Trees"]
+position = Vector2(-3002, 0)
+scale = Vector2(0.565, 0.565)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Tree08" type="Sprite2D" parent="Trees"]
+position = Vector2(-2667, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wgtdh")
+offset = Vector2(0, -512)
+
+[node name="Bush01" type="Sprite2D" parent="Trees"]
+position = Vector2(-3467, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush02" type="Sprite2D" parent="Trees"]
+position = Vector2(-2502, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush03" type="Sprite2D" parent="Trees"]
+position = Vector2(-1603, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush04" type="Sprite2D" parent="Trees"]
+position = Vector2(-862, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush05" type="Sprite2D" parent="Trees"]
+position = Vector2(437, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush06" type="Sprite2D" parent="Trees"]
+position = Vector2(1105, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush07" type="Sprite2D" parent="Trees"]
+position = Vector2(2289, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush08" type="Sprite2D" parent="Trees"]
+position = Vector2(3178, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_hqsih")
+offset = Vector2(0, -128)
+
+[node name="Bush09" type="Sprite2D" parent="Trees"]
+position = Vector2(-3154, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush10" type="Sprite2D" parent="Trees"]
+position = Vector2(-2219, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush11" type="Sprite2D" parent="Trees"]
+position = Vector2(-1296, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush12" type="Sprite2D" parent="Trees"]
+position = Vector2(-133, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush13" type="Sprite2D" parent="Trees"]
+position = Vector2(778, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush14" type="Sprite2D" parent="Trees"]
+position = Vector2(1395, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush15" type="Sprite2D" parent="Trees"]
+position = Vector2(2606, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Bush16" type="Sprite2D" parent="Trees"]
+position = Vector2(3475, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jk8p4")
+offset = Vector2(0, -128)
+
+[node name="Mushrooms" type="Node2D" parent="."]
+modulate = Color(0.762404, 0.762404, 0.762404, 1)
+
+[node name="Mushroom01" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-3104, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom02" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-2317, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom03" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-2038, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom04" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-628, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom05" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(39, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom06" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(782, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom07" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(1360, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom08" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(2039, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom09" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(3074, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom10" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(2884, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom11" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-1275, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom12" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-1161, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom13" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-977, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_y5hla")
+offset = Vector2(0, -64)
+
+[node name="Mushroom14" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-2850, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom15" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-2177, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom16" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-1644, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom17" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-1549, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom18" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-857, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom19" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-457, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom20" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(514, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom21" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(889, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom22" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(1467, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom23" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(2280, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom24" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(2655, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom25" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(2534, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Mushroom26" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(2991, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_b6wai")
+offset = Vector2(0, -64)
+
+[node name="Wheel" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(-506, 0)
+rotation = -3.14159
+scale = Vector2(0.341883, 0.341883)
+texture = ExtResource("2_uhs4j")
+offset = Vector2(0, 128)
+
+[node name="Wheel2" type="Sprite2D" parent="Mushrooms"]
+position = Vector2(697, 0)
+rotation = -3.14159
+scale = Vector2(0.341883, 0.341883)
+texture = ExtResource("2_uhs4j")
+offset = Vector2(0, 128)
+
+[node name="Vehicle" type="Sprite2D" parent="Mushrooms"]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(-848.956, 0)
+rotation = -3.14159
+scale = Vector2(0.377358, 0.377358)
+texture = ExtResource("3_u63b8")
+offset = Vector2(0, 50)
+
+[node name="Garage42" type="Sprite2D" parent="."]
+texture = ExtResource("1_qno4e")
+offset = Vector2(0, -384)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -418.0
+offset_right = 413.0
+offset_bottom = 84.0
+color = Color(0.752941, 0.74902, 0.737255, 1)

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866666 33.866666"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="rock02.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     width="128px"
+     inkscape:zoom="4.5896745"
+     inkscape:cx="51.964469"
+     inkscape:cy="64.928352"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.912278,-147.90153)">
+    <path
+       style="fill:#7a7474;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 64.772786,168.09788 2.906999,-9.85691 9.099648,-3.00119 12.304545,3.05182 5.343842,6.87861 -3.478145,5.9175 -14.753224,1.84631 z"
+       id="path876"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:#a09a9a;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 64.772786,168.09788 2.906999,-9.85691 9.099648,-3.00119 12.304545,3.05182 -11.814275,-1.54932 -8.902779,2.78205 z"
+       id="path1597"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:#a09a9a;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 69.702622,163.51419 3.96782,-3.50011 5.733373,0.61116 4.406943,-1.56619 -4.56076,2.8322 -5.334807,-1.07549 z"
+       id="path3164"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:#a09a9a;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.953804,168.69465 8.032462,1.19652 5.375247,-7.16523 -5.660432,6.36178 z"
+       id="path3395"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#464141;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 68.555271,167.80395 7.807584,4.2517 -3.575596,-3.23229 z"
+       id="path3576"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#464141;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 76.196451,172.93402 14.753224,-1.84631 3.478145,-5.9175 -4.187893,4.95549 z"
+       id="path4285"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#464141;fill-opacity:1;stroke:none;stroke-width:0.273776px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.213378,167.30721 6.59167,-3.20256 4.22992,-0.84037 -4.835484,-0.0197 z"
+       id="path4466"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+  <metadata
+     id="metadata828">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>IcterusGames</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

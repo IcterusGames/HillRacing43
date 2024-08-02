@@ -1,0 +1,216 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8e24x5opdiqn"]
+
+[ext_resource type="Script" path="res://gui/main.gd" id="1_pqdiy"]
+[ext_resource type="PackedScene" uid="uid://ojsfmtb70yhp" path="res://scenes/terrain.tscn" id="1_ynw5l"]
+[ext_resource type="PackedScene" uid="uid://dkiv07k4mxnfw" path="res://scenes/car.tscn" id="2_ggs86"]
+[ext_resource type="PackedScene" uid="uid://c1lrcqch251yx" path="res://scenes/parallax.tscn" id="2_o1kn4"]
+[ext_resource type="Texture2D" uid="uid://cjr4c7elih2n2" path="res://assets/title.svg" id="3_l3i2j"]
+[ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="6_tqrn5"]
+[ext_resource type="PackedScene" uid="uid://nr14eso61en7" path="res://gui/settings.tscn" id="7_nry05"]
+[ext_resource type="PackedScene" uid="uid://crsba2elk6qyu" path="res://gui/credits.tscn" id="8_mwn0h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iw07j"]
+
+[sub_resource type="Animation" id="Animation_cmu8r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TabContainer/MainMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7d0wv"]
+resource_name = "intro"
+length = 5.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/TabContainer/MainMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrref"]
+_data = {
+"RESET": SubResource("Animation_cmu8r"),
+"intro": SubResource("Animation_7d0wv")
+}
+
+[node name="GuiMain" type="Node2D"]
+script = ExtResource("1_pqdiy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 300)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Parallax" parent="." instance=ExtResource("2_o1kn4")]
+position = Vector2(1151, 0)
+
+[node name="Terrain" parent="." instance=ExtResource("1_ynw5l")]
+unique_name_in_owner = true
+lacunarity = 5.0
+scale_y = 100.0
+slope = 0.0
+generate_items = false
+dif_init = 1.0
+
+[node name="Car" parent="." instance=ExtResource("2_ggs86")]
+unique_name_in_owner = true
+position = Vector2(-600, 0)
+AUTO_ADVANCE = true
+ENABLE_USER = false
+MUTE = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iw07j")
+current_tab = 0
+tabs_visible = false
+
+[node name="MainMenu" type="VBoxContainer" parent="CanvasLayer/TabContainer"]
+layout_mode = 2
+theme = ExtResource("6_tqrn5")
+theme_override_constants/separation = 0
+metadata/_tab_index = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/TabContainer/MainMenu"]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("3_l3i2j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TabContainer/MainMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/TabContainer/MainMenu/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "PLAY"
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/TabContainer/MainMenu/VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "CREDITS"
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer/TabContainer/MainMenu/VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/TabContainer/MainMenu/VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "EXIT"
+
+[node name="Settings" parent="CanvasLayer/TabContainer" instance=ExtResource("7_nry05")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Credits" parent="CanvasLayer/TabContainer" instance=ExtResource("8_mwn0h")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lrref")
+}
+autoplay = "intro"
+
+[connection signal="pressed" from="CanvasLayer/TabContainer/MainMenu/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/MainMenu/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/MainMenu/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/MainMenu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="back_pressed" from="CanvasLayer/TabContainer/Settings" to="." method="_on_settings_back_pressed"]
+[connection signal="back_pressed" from="CanvasLayer/TabContainer/Credits" to="." method="_on_credits_back_pressed"]

@@ -1,0 +1,549 @@
+[gd_scene load_steps=16 format=3 uid="uid://bfshsgv7owb40"]
+
+[ext_resource type="Script" path="res://scenes/planes/sawmill.gd" id="1_phukv"]
+[ext_resource type="Texture2D" uid="uid://cdysc5lyaph45" path="res://assets/sprites/wood_wall.svg" id="1_qnt4c"]
+[ext_resource type="Texture2D" uid="uid://bufpc700gy60o" path="res://assets/sprites/window.svg" id="2_vs0he"]
+[ext_resource type="Texture2D" uid="uid://cqqbuengwh2fe" path="res://assets/sprites/wood_ribbon.svg" id="3_k3fgi"]
+[ext_resource type="Texture2D" uid="uid://d220tqiys3rbe" path="res://assets/sprites/wood_door.svg" id="4_ndm0x"]
+[ext_resource type="Texture2D" uid="uid://bsn7mwleiuo1v" path="res://assets/sprites/stump.svg" id="5_a0q1r"]
+[ext_resource type="Texture2D" uid="uid://bsop7s7c3vffb" path="res://assets/sprites/sawmill_log_01.svg" id="5_hjtce"]
+[ext_resource type="Texture2D" uid="uid://cmk03bdakbm4o" path="res://assets/sprites/sawmill_log_02.svg" id="6_jf7ce"]
+[ext_resource type="Texture2D" uid="uid://dilisd2cakwkg" path="res://assets/sprites/tree_02.svg" id="6_x8miq"]
+[ext_resource type="Texture2D" uid="uid://6c5c2mot6vxo" path="res://assets/sprites/sawmill_log_03.svg" id="7_5hhde"]
+[ext_resource type="Texture2D" uid="uid://bqmypev07ihmv" path="res://assets/sprites/tree_01.svg" id="7_v5nq6"]
+[ext_resource type="Texture2D" uid="uid://cvvf0u5ibvx3y" path="res://assets/sprites/sawmill_roof.svg" id="9_eomck"]
+[ext_resource type="Texture2D" uid="uid://dd15sy4lagrr5" path="res://assets/sprites/sawmill_roof_l.svg" id="10_ndekc"]
+[ext_resource type="Texture2D" uid="uid://benpyqn0m4ey4" path="res://assets/sprites/sawmill_roof_r.svg" id="11_ps1me"]
+[ext_resource type="Texture2D" uid="uid://dr5wg54hiplw2" path="res://assets/sprites/sawmill_saw.svg" id="12_0b3mv"]
+
+[node name="Sawmill" type="Node2D"]
+script = ExtResource("1_phukv")
+
+[node name="Stumps3" type="Node2D" parent="."]
+modulate = Color(0.427493, 0.427493, 0.427493, 1)
+
+[node name="Stump6" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-3089, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump7" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-1616, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump9" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-1296, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Tree08" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-1865, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree01" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-3392, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree02" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-2103, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree05" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-2922, 0)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree03" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-1078, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree04" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-2624, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree06" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-1382, 0)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree07" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-2323, 0)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree09" type="Sprite2D" parent="Stumps3"]
+position = Vector2(685, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree10" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-842, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree11" type="Sprite2D" parent="Stumps3"]
+position = Vector2(447, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree12" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-372, 0)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree14" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-74, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree15" type="Sprite2D" parent="Stumps3"]
+position = Vector2(1168, 0)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree16" type="Sprite2D" parent="Stumps3"]
+position = Vector2(227, 0)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree17" type="Sprite2D" parent="Stumps3"]
+position = Vector2(3163, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree18" type="Sprite2D" parent="Stumps3"]
+position = Vector2(1636, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree19" type="Sprite2D" parent="Stumps3"]
+position = Vector2(2925, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree20" type="Sprite2D" parent="Stumps3"]
+position = Vector2(2106, 0)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Tree22" type="Sprite2D" parent="Stumps3"]
+position = Vector2(2404, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_v5nq6")
+offset = Vector2(0, -512)
+
+[node name="Tree24" type="Sprite2D" parent="Stumps3"]
+position = Vector2(2705, 0)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("6_x8miq")
+offset = Vector2(0, -512)
+
+[node name="Stump8" type="Sprite2D" parent="Stumps3"]
+position = Vector2(-2210, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stumps2" type="Node2D" parent="."]
+modulate = Color(0.856068, 0.856067, 0.856067, 1)
+
+[node name="Stump6" type="Sprite2D" parent="Stumps2"]
+position = Vector2(-3298, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump7" type="Sprite2D" parent="Stumps2"]
+position = Vector2(-2681, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump8" type="Sprite2D" parent="Stumps2"]
+position = Vector2(-1977, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump9" type="Sprite2D" parent="Stumps2"]
+position = Vector2(-1505, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stumps" type="Node2D" parent="."]
+modulate = Color(0.779291, 0.779291, 0.779291, 1)
+
+[node name="Stump" type="Sprite2D" parent="Stumps"]
+position = Vector2(-1193, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump2" type="Sprite2D" parent="Stumps"]
+position = Vector2(-1742, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump3" type="Sprite2D" parent="Stumps"]
+position = Vector2(-2458, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump4" type="Sprite2D" parent="Stumps"]
+position = Vector2(-2981, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Stump5" type="Sprite2D" parent="Stumps"]
+position = Vector2(-3527, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_a0q1r")
+offset = Vector2(0, -128)
+
+[node name="Logs" type="Node2D" parent="."]
+
+[node name="SawmillLog01" type="Sprite2D" parent="Logs"]
+position = Vector2(-557, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog02" type="Sprite2D" parent="Logs"]
+position = Vector2(-638, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog16" type="Sprite2D" parent="Logs/SawmillLog02"]
+position = Vector2(130, -193.333)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog17" type="Sprite2D" parent="Logs/SawmillLog02"]
+position = Vector2(10, -400)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog03" type="Sprite2D" parent="Logs"]
+position = Vector2(-716, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog16" type="Sprite2D" parent="Logs/SawmillLog03"]
+position = Vector2(126.667, -203.333)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog04" type="Sprite2D" parent="Logs"]
+position = Vector2(1001, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog04"]
+position = Vector2(3.3335, -406.667)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog05" type="Sprite2D" parent="Logs"]
+position = Vector2(926, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog05"]
+position = Vector2(126.667, -203.333)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog15" type="Sprite2D" parent="Logs/SawmillLog05"]
+position = Vector2(-3.33325, -410)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog13" type="Sprite2D" parent="Logs"]
+position = Vector2(1078, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog13"]
+position = Vector2(-133.333, -203.333)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog06" type="Sprite2D" parent="Logs"]
+position = Vector2(851.4, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog16" type="Sprite2D" parent="Logs/SawmillLog06"]
+position = Vector2(118.667, -206.667)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog07" type="Sprite2D" parent="Logs"]
+position = Vector2(1434, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog07"]
+position = Vector2(3.33301, -406.667)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog08" type="Sprite2D" parent="Logs"]
+position = Vector2(1359, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog08"]
+position = Vector2(126.667, -203.333)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog15" type="Sprite2D" parent="Logs/SawmillLog08"]
+position = Vector2(-3.3335, -410)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs"]
+position = Vector2(1511, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog14"]
+position = Vector2(-133.333, -203.333)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog09" type="Sprite2D" parent="Logs"]
+position = Vector2(1284.4, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog16" type="Sprite2D" parent="Logs/SawmillLog09"]
+position = Vector2(118.667, -206.667)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog10" type="Sprite2D" parent="Logs"]
+position = Vector2(1897, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog10"]
+position = Vector2(3.3335, -406.667)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog11" type="Sprite2D" parent="Logs"]
+position = Vector2(1822, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog11"]
+position = Vector2(126.667, -203.333)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog15" type="Sprite2D" parent="Logs/SawmillLog11"]
+position = Vector2(-3.33301, -410)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog15" type="Sprite2D" parent="Logs"]
+position = Vector2(1974, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jf7ce")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog14" type="Sprite2D" parent="Logs/SawmillLog15"]
+position = Vector2(-133.333, -203.333)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog12" type="Sprite2D" parent="Logs"]
+position = Vector2(1747.4, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_5hhde")
+offset = Vector2(0, -128)
+
+[node name="SawmillLog16" type="Sprite2D" parent="Logs/SawmillLog12"]
+position = Vector2(118.667, -206.667)
+texture = ExtResource("5_hjtce")
+offset = Vector2(0, -128)
+
+[node name="Sawmill" type="Node2D" parent="."]
+
+[node name="WoodWall" type="Sprite2D" parent="Sawmill"]
+position = Vector2(8, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qnt4c")
+offset = Vector2(0, -256)
+
+[node name="WoodWall4" type="Sprite2D" parent="Sawmill"]
+position = Vector2(8, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qnt4c")
+offset = Vector2(0, -256)
+
+[node name="WoodWall2" type="Sprite2D" parent="Sawmill"]
+position = Vector2(264, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qnt4c")
+offset = Vector2(0, -256)
+
+[node name="WoodWall5" type="Sprite2D" parent="Sawmill"]
+position = Vector2(264, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qnt4c")
+offset = Vector2(0, -256)
+
+[node name="WoodWall3" type="Sprite2D" parent="Sawmill"]
+position = Vector2(520, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qnt4c")
+offset = Vector2(0, -256)
+
+[node name="WoodWall6" type="Sprite2D" parent="Sawmill"]
+position = Vector2(520, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qnt4c")
+offset = Vector2(0, -256)
+
+[node name="Window" type="Sprite2D" parent="Sawmill"]
+position = Vector2(243, -169)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vs0he")
+
+[node name="Window2" type="Sprite2D" parent="Sawmill"]
+position = Vector2(489, -169)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vs0he")
+
+[node name="WoodRibbon" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-136, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k3fgi")
+offset = Vector2(0, -256)
+
+[node name="WoodRibbon5" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-136, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k3fgi")
+offset = Vector2(0, -256)
+flip_h = true
+
+[node name="WoodRibbon3" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-484, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k3fgi")
+offset = Vector2(0, -256)
+
+[node name="WoodRibbon4" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-484, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k3fgi")
+offset = Vector2(0, -256)
+flip_h = true
+
+[node name="WoodRibbon2" type="Sprite2D" parent="Sawmill"]
+position = Vector2(664, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k3fgi")
+offset = Vector2(0, -256)
+
+[node name="WoodRibbon6" type="Sprite2D" parent="Sawmill"]
+position = Vector2(664, 0)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k3fgi")
+offset = Vector2(0, -256)
+flip_h = true
+
+[node name="WoodDoor" type="Sprite2D" parent="Sawmill"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ndm0x")
+offset = Vector2(0, -256)
+
+[node name="WoodDoor2" type="Sprite2D" parent="Sawmill"]
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ndm0x")
+offset = Vector2(0, -256)
+
+[node name="SawmillRoof" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-165, -382)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_eomck")
+
+[node name="SawmillRoof2" type="Sprite2D" parent="Sawmill"]
+position = Vector2(91, -382)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_eomck")
+
+[node name="SawmillRoof3" type="Sprite2D" parent="Sawmill"]
+position = Vector2(347, -382)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_eomck")
+
+[node name="SawmillRoofL" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-421, -382)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ndekc")
+
+[node name="SawmillRoofR" type="Sprite2D" parent="Sawmill"]
+position = Vector2(603, -382)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_ps1me")
+
+[node name="SawmillSaw" type="Sprite2D" parent="Sawmill"]
+position = Vector2(-282, -111)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_0b3mv")

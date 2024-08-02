@@ -1,0 +1,105 @@
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://iglcheijqvq"]
+
+[ext_resource type="FontFile" uid="uid://mdx8hiaoc4wi" path="res://assets/fonts/GochiHand-Regular.ttf" id="1_6h2uq"]
+[ext_resource type="Texture2D" uid="uid://bpncclfoxvgci" path="res://assets/gui/check_checked.svg" id="1_ffenl"]
+[ext_resource type="Texture2D" uid="uid://c7xte5m2trwf4" path="res://assets/gui/check.svg" id="2_0ijpx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvjub"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2iik"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 1.0
+bg_color = Color(0, 0, 0, 0.588235)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ra4e6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nr2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_67ow8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ncpon"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkxhk"]
+
+[sub_resource type="Gradient" id="Gradient_pwtl2"]
+offsets = PackedFloat32Array(0.9, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v8tjh"]
+gradient = SubResource("Gradient_pwtl2")
+width = 16
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_co3b7"]
+offsets = PackedFloat32Array(0.9, 1)
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s2l5p"]
+gradient = SubResource("Gradient_co3b7")
+width = 16
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjvqf"]
+bg_color = Color(1, 1, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+default_font = ExtResource("1_6h2uq")
+default_font_size = 32
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_hover_color = Color(1, 1, 0.705882, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_wvjub")
+Button/styles/hover = SubResource("StyleBoxFlat_l2iik")
+Button/styles/normal = SubResource("StyleBoxFlat_l2iik")
+Button/styles/pressed = SubResource("StyleBoxFlat_l2iik")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_ra4e6")
+CheckButton/icons/checked = ExtResource("1_ffenl")
+CheckButton/icons/checked_mirrored = ExtResource("1_ffenl")
+CheckButton/icons/unchecked = ExtResource("2_0ijpx")
+CheckButton/icons/unchecked_mirrored = ExtResource("2_0ijpx")
+CheckButton/styles/disabled = SubResource("StyleBoxEmpty_7nr2e")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_67ow8")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_ncpon")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_mkxhk")
+CheckButton/styles/pressed = SubResource("StyleBoxEmpty_mkxhk")
+HSlider/icons/grabber = SubResource("GradientTexture2D_v8tjh")
+HSlider/icons/grabber_highlight = SubResource("GradientTexture2D_s2l5p")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_vjvqf")

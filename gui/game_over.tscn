@@ -1,0 +1,260 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4xctsymfh1y1"]
+
+[ext_resource type="Script" path="res://gui/game_over.gd" id="1_16j46"]
+[ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="2_5qosq"]
+[ext_resource type="PackedScene" uid="uid://dmmptcc8oxpxr" path="res://items/medal.tscn" id="3_nn6fy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nob8a"]
+font_size = 96
+font_color = Color(1, 0, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o745n"]
+font_size = 32
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1n81o"]
+font_size = 42
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="GuiGameOver" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_16j46")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5qosq")
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1152, 170)
+layout_mode = 2
+
+[node name="GameOverLabel" type="Label" parent="VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -49.5
+offset_right = 262.0
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_nob8a")
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1152, 220)
+layout_mode = 2
+
+[node name="DistanceBox" type="HBoxContainer" parent="VBoxContainer/Control2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_left = 678.0
+offset_top = 17.0
+offset_right = 998.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Control2/DistanceBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DISTANCE:"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="DistanceLabel" type="Label" parent="VBoxContainer/Control2/DistanceBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="CoinsBox" type="HBoxContainer" parent="VBoxContainer/Control2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_left = 678.0
+offset_top = 63.0
+offset_right = 998.0
+offset_bottom = 103.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Control2/CoinsBox"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "COINS:"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="CoinsLabel" type="Label" parent="VBoxContainer/Control2/CoinsBox"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="JumpsBox" type="HBoxContainer" parent="VBoxContainer/Control2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_left = 678.0
+offset_top = 108.0
+offset_right = 998.0
+offset_bottom = 148.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Control2/JumpsBox"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "JUMPS:"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="JumpsLabel" type="Label" parent="VBoxContainer/Control2/JumpsBox"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="BackflipsBox" type="HBoxContainer" parent="VBoxContainer/Control2"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_left = 678.0
+offset_top = 149.0
+offset_right = 998.0
+offset_bottom = 189.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Control2/BackflipsBox"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "BACKFLIPS:"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="BackflipsLabel" type="Label" parent="VBoxContainer/Control2/BackflipsBox"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_o745n")
+
+[node name="Medal1" parent="VBoxContainer/Control2" instance=ExtResource("3_nn6fy")]
+visible = false
+position = Vector2(472, 52)
+disabled = true
+
+[node name="Medal2" parent="VBoxContainer/Control2" instance=ExtResource("3_nn6fy")]
+visible = false
+position = Vector2(587, 49)
+disabled = true
+
+[node name="Medal3" parent="VBoxContainer/Control2" instance=ExtResource("3_nn6fy")]
+visible = false
+position = Vector2(475, 154)
+disabled = true
+
+[node name="Medal4" parent="VBoxContainer/Control2" instance=ExtResource("3_nn6fy")]
+visible = false
+position = Vector2(579, 151)
+disabled = true
+
+[node name="Control3" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1152, 70)
+layout_mode = 2
+
+[node name="YourScoreBox" type="HBoxContainer" parent="VBoxContainer/Control3"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -25.5
+offset_right = 190.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Control3/YourScoreBox"]
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "YOUR SCORE:"
+label_settings = SubResource("LabelSettings_1n81o")
+
+[node name="YourScoreLabel" type="Label" parent="VBoxContainer/Control3/YourScoreBox"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_1n81o")
+
+[node name="Control4" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1152, 150)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -22.5
+offset_right = 262.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="VBoxContainer/Control4/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "RETRY"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer/Control4/HBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/Control4/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control4/HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

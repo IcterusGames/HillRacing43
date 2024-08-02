@@ -1,0 +1,180 @@
+[gd_scene load_steps=19 format=3 uid="uid://dkiv07k4mxnfw"]
+
+[ext_resource type="Script" path="res://scenes/car.gd" id="1_nyvst"]
+[ext_resource type="Texture2D" uid="uid://b5e2pm6peh452" path="res://assets/sprites/wheel.png" id="2_c3hif"]
+[ext_resource type="PackedScene" uid="uid://dfyc8hpvibfg" path="res://particles/nitrous.tscn" id="2_qkxy2"]
+[ext_resource type="Texture2D" uid="uid://bi2oywguuarqr" path="res://assets/sprites/vehicle.png" id="2_t0jfr"]
+[ext_resource type="Script" path="res://scenes/wheel.gd" id="3_wqkeo"]
+[ext_resource type="Texture2D" uid="uid://bikwef01vdbrh" path="res://assets/sprites/head.png" id="4_uactd"]
+[ext_resource type="Script" path="res://scenes/car_head.gd" id="4_vvhrq"]
+[ext_resource type="AudioStream" uid="uid://m1ko4w6ijnpu" path="res://assets/sounds/FX/385929__pol__s010_engine_idle_mono.wav" id="5_oe35j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2akv"]
+size = Vector2(111, 41)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tf8x7"]
+radius = 31.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qrdkc"]
+friction = 0.9
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifn7m"]
+radius = 40.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vqact"]
+friction = 0.9
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_63wbi"]
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwrns"]
+radius = 34.1321
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44evf"]
+size = Vector2(161, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t57hs"]
+size = Vector2(169, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3s2n2"]
+size = Vector2(79, 86)
+
+[node name="Car" type="RigidBody2D"]
+collision_layer = 4
+mass = 0.5
+can_sleep = false
+script = ExtResource("1_nyvst")
+
+[node name="ParticleNitrous" parent="." instance=ExtResource("2_qkxy2")]
+position = Vector2(-63, 16)
+
+[node name="Vehicle" type="Sprite2D" parent="."]
+position = Vector2(6.00001, 14)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_t0jfr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 7.5)
+shape = SubResource("RectangleShape2D_n2akv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-12, -27)
+shape = SubResource("CircleShape2D_tf8x7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(460, 0)
+zoom = Vector2(0.7, 0.7)
+
+[node name="PinJointRear" type="PinJoint2D" parent="."]
+position = Vector2(-53, 56)
+node_a = NodePath("..")
+node_b = NodePath("WheelRear")
+softness = 8.0
+
+[node name="WheelRear" type="RigidBody2D" parent="PinJointRear"]
+collision_layer = 2
+collision_mask = 35
+physics_material_override = SubResource("PhysicsMaterial_qrdkc")
+can_sleep = false
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("3_wqkeo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinJointRear/WheelRear"]
+shape = SubResource("CircleShape2D_ifn7m")
+
+[node name="Wheel" type="Sprite2D" parent="PinJointRear/WheelRear"]
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_c3hif")
+
+[node name="Marker2D" type="Marker2D" parent="PinJointRear"]
+position = Vector2(-10, 0)
+
+[node name="PinJointFront" type="PinJoint2D" parent="."]
+position = Vector2(53, 56)
+node_a = NodePath("..")
+node_b = NodePath("WheelFront")
+softness = 8.0
+
+[node name="WheelFront" type="RigidBody2D" parent="PinJointFront"]
+collision_layer = 2
+collision_mask = 35
+physics_material_override = SubResource("PhysicsMaterial_vqact")
+can_sleep = false
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("3_wqkeo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinJointFront/WheelFront"]
+shape = SubResource("CircleShape2D_63wbi")
+
+[node name="Wheel" type="Sprite2D" parent="PinJointFront/WheelFront"]
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_c3hif")
+
+[node name="Marker2D" type="Marker2D" parent="PinJointFront"]
+position = Vector2(-10, 0)
+
+[node name="Head" type="RigidBody2D" parent="."]
+position = Vector2(-13, -63)
+collision_layer = 8
+collision_mask = 9
+mass = 0.15
+can_sleep = false
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("4_vvhrq")
+
+[node name="Head" type="Sprite2D" parent="Head"]
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("4_uactd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
+shape = SubResource("CircleShape2D_rwrns")
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
+position = Vector2(13, -65)
+rotation = 1.5708
+node_a = NodePath("..")
+node_b = NodePath("../Head")
+damping = 0.7
+
+[node name="PinJointNeck" type="PinJoint2D" parent="."]
+position = Vector2(-14, -29)
+node_a = NodePath("..")
+node_b = NodePath("../Head")
+
+[node name="BodyHeadLimit" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(0, -5)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyHeadLimit"]
+position = Vector2(3.5, 21.5)
+shape = SubResource("RectangleShape2D_44evf")
+
+[node name="AreaItems" type="Area2D" parent="."]
+visible = false
+collision_layer = 4
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaItems"]
+position = Vector2(3.5, 36)
+shape = SubResource("RectangleShape2D_t57hs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AreaItems"]
+position = Vector2(-10.5, -57)
+shape = SubResource("RectangleShape2D_3s2n2")
+
+[node name="AudioEngine" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_oe35j")
+volume_db = -16.0
+autoplay = true
+bus = &"FX"
+
+[connection signal="body_entered" from="Head" to="." method="_on_head_body_entered"]
+[connection signal="collided" from="Head" to="." method="_on_head_collided"]
+[connection signal="area_entered" from="AreaItems" to="." method="_on_area_items_area_entered"]

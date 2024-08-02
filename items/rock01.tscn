@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://daauvsix1v3i5"]
+
+[ext_resource type="Texture2D" uid="uid://ewca6u0lm8km" path="res://assets/sprites/rock01.svg" id="1_0cr5c"]
+[ext_resource type="Script" path="res://items/rock.gd" id="1_ahhqa"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_36p8q"]
+friction = 0.8
+
+[node name="Rock01" type="RigidBody2D"]
+position = Vector2(0, -4)
+collision_layer = 32
+collision_mask = 47
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_36p8q")
+can_sleep = false
+script = ExtResource("1_ahhqa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-11, -10)
+polygon = PackedVector2Array(-49, 46, -44, -6, 6, -32, 60, -24, 72, 25, 37, 60, -9, 59)
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
+position = Vector2(11, 14)
+texture = ExtResource("1_0cr5c")

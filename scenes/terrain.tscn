@@ -1,0 +1,23 @@
+[gd_scene load_steps=11 format=3 uid="uid://ojsfmtb70yhp"]
+
+[ext_resource type="Script" path="res://scenes/terrain.gd" id="1_r4vu6"]
+[ext_resource type="Texture2D" uid="uid://05dwnstp85rj" path="res://assets/sprites/terrain.png" id="2_e4hxc"]
+[ext_resource type="PackedScene" uid="uid://27c4kayk776w" path="res://scenes/planes/farm.tscn" id="2_lf3w4"]
+[ext_resource type="Texture2D" uid="uid://c1mloaqao7ek1" path="res://assets/sprites/dirt.png" id="3_i053o"]
+[ext_resource type="PackedScene" uid="uid://r8shl16jm0p1" path="res://scenes/planes/forest.tscn" id="3_okh1d"]
+[ext_resource type="PackedScene" uid="uid://bfshsgv7owb40" path="res://scenes/planes/sawmill.tscn" id="4_pf36l"]
+[ext_resource type="PackedScene" uid="uid://daauvsix1v3i5" path="res://items/rock01.tscn" id="5_p5rke"]
+[ext_resource type="PackedScene" uid="uid://duf3viswrbhmx" path="res://scenes/planes/garage.tscn" id="5_xmh66"]
+[ext_resource type="PackedScene" uid="uid://denmh6fxdf6oj" path="res://items/rock02.tscn" id="6_qowfh"]
+[ext_resource type="PackedScene" uid="uid://p7k5gmpqkh5o" path="res://items/rock03.tscn" id="7_lrh61"]
+
+[node name="Terrain" type="Node2D"]
+script = ExtResource("1_r4vu6")
+texture_terrain = ExtResource("2_e4hxc")
+texture_dirt = ExtResource("3_i053o")
+
+[node name="PlanesPreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("01_forest", "02_garage", "03_farm", "04_sawmill"), [ExtResource("3_okh1d"), ExtResource("5_xmh66"), ExtResource("2_lf3w4"), ExtResource("4_pf36l")]]
+
+[node name="RocksPreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("rock01", "rock02", "rock03"), [ExtResource("5_p5rke"), ExtResource("6_qowfh"), ExtResource("7_lrh61")]]

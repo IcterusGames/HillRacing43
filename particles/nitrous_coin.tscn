@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcm5oqaq8fqhc"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g30am"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_ely1x"]
+offsets = PackedFloat32Array(0, 0.221557, 1)
+colors = PackedColorArray(0.168627, 0.0745098, 0.454902, 0, 0.212, 0.251, 2, 1, 0.545098, 0, 0.882353, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dmei1"]
+gradient = SubResource("Gradient_ely1x")
+
+[sub_resource type="Curve" id="Curve_6gtbd"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.307692), -2.05357, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_x8bqn"]
+curve = SubResource("Curve_6gtbd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0n000"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 25.0
+emission_ring_inner_radius = 20.0
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, -50, 0)
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_curve = SubResource("CurveTexture_x8bqn")
+color_ramp = SubResource("GradientTexture1D_dmei1")
+
+[sub_resource type="Gradient" id="Gradient_rskkc"]
+offsets = PackedFloat32Array(0, 0.41206, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.122, 2, 1, 0, 0.603922, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bg1ut"]
+gradient = SubResource("Gradient_rskkc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_g30am")
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_0n000")
+texture = SubResource("GradientTexture2D_bg1ut")
+lifetime = 0.5
+local_coords = true

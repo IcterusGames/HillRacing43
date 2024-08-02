@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://vkiyf8olr1c2"]
+
+[ext_resource type="Texture2D" uid="uid://dd6if1ywucudm" path="res://assets/sprites/grass.svg" id="1_vf5bl"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jyn8b"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_h2ql2"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vxxan"]
+gradient = SubResource("Gradient_h2ql2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w7lhq"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 142.86
+initial_velocity_max = 151.52
+angular_velocity_min = -200.0
+angular_velocity_max = 200.0
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = -2.23517e-05
+gravity = Vector3(0, 196, 0)
+color_ramp = SubResource("GradientTexture1D_vxxan")
+anim_offset_max = 1.0
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_jyn8b")
+emitting = false
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_w7lhq")
+texture = ExtResource("1_vf5bl")
+fixed_fps = 60
+interpolate = false
+visibility_rect = Rect2(-10000, -10000, 20000, 20000)

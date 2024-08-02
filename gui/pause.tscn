@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=3 uid="uid://vala1t81dptk"]
+
+[ext_resource type="Script" path="res://gui/pause.gd" id="1_2nryp"]
+[ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="2_vq3cr"]
+[ext_resource type="PackedScene" uid="uid://nr14eso61en7" path="res://gui/settings.tscn" id="3_gtotj"]
+
+[sub_resource type="Shader" id="Shader_r242n"]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform sampler2D texture_screen : hint_screen_texture, filter_linear_mipmap;
+
+void fragment() {
+	COLOR = textureLod(texture_screen, SCREEN_UV, 2.5);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_roaae"]
+shader = SubResource("Shader_r242n")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7cbc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6xg11"]
+font_size = 52
+font_color = Color(1, 1, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="GuiPause" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_2nryp")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_roaae")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GuiPause" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vq3cr")
+
+[node name="TabContainer" type="TabContainer" parent="GuiPause"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p7cbc")
+current_tab = 0
+tabs_visible = false
+
+[node name="Menu" type="VBoxContainer" parent="GuiPause/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="GuiPause/TabContainer/Menu"]
+layout_mode = 2
+text = "PAUSE"
+label_settings = SubResource("LabelSettings_6xg11")
+horizontal_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="GuiPause/TabContainer/Menu"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="ResumeButton" type="Button" parent="GuiPause/TabContainer/Menu"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "RESUME"
+
+[node name="Control" type="Control" parent="GuiPause/TabContainer/Menu"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="SurrenderButton" type="Button" parent="GuiPause/TabContainer/Menu"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "SURRENDER"
+
+[node name="ExitButton" type="Button" parent="GuiPause/TabContainer/Menu"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+text = "EXIT"
+
+[node name="GuiSettings" parent="GuiPause/TabContainer" instance=ExtResource("3_gtotj")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[connection signal="pressed" from="GuiPause/TabContainer/Menu/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="GuiPause/TabContainer/Menu/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="GuiPause/TabContainer/Menu/SurrenderButton" to="." method="_on_surrender_button_pressed"]
+[connection signal="pressed" from="GuiPause/TabContainer/Menu/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="back_pressed" from="GuiPause/TabContainer/GuiSettings" to="." method="_on_gui_settings_back_pressed"]

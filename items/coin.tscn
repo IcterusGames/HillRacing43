@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj6sikxu3u016"]
+
+[ext_resource type="Script" path="res://items/coin.gd" id="1_3l718"]
+[ext_resource type="Texture2D" uid="uid://c07k1xwnuj1xu" path="res://assets/sprites/coin.svg" id="1_gnsgi"]
+[ext_resource type="AudioStream" uid="uid://c3aqwq608gsba" path="res://assets/sounds/FX/coin01.wav" id="3_s07cm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jp85p"]
+radius = 40.0
+
+[sub_resource type="Gradient" id="Gradient_t1ek4"]
+offsets = PackedFloat32Array(0.974874, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f3qfi"]
+gradient = SubResource("Gradient_t1ek4")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_6oh1o"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Coin" type="Node2D"]
+script = ExtResource("1_3l718")
+
+[node name="Coin" type="Sprite2D" parent="."]
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("1_gnsgi")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 16
+collision_mask = 0
+metadata/type = "coin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jp85p")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_index = 4
+emitting = false
+amount = 32
+lifetime = 0.25
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+draw_order = 1
+texture = SubResource("GradientTexture2D_f3qfi")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 250.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_6oh1o")
+color = Color(1, 0.721569, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_s07cm")
+volume_db = -8.0
+bus = &"FX"
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

@@ -1,0 +1,296 @@
+[gd_scene load_steps=20 format=3 uid="uid://dqj65luqyqcwo"]
+
+[ext_resource type="Script" path="res://gui/hud.gd" id="1_findq"]
+[ext_resource type="Texture2D" uid="uid://0pk0awu1mi7g" path="res://assets/sprites/nitrous.svg" id="2_gyfmo"]
+[ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="2_yjyur"]
+[ext_resource type="PackedScene" uid="uid://dcm5oqaq8fqhc" path="res://particles/nitrous_coin.tscn" id="4_k55f3"]
+[ext_resource type="Texture2D" uid="uid://dludwo8nm6ip7" path="res://assets/sprites/keys/Keyboard_White_Arrow_Up.png" id="5_00pq3"]
+[ext_resource type="Texture2D" uid="uid://dlco4gke4put4" path="res://assets/gui/nitrous_bar.svg" id="5_iohpg"]
+[ext_resource type="Texture2D" uid="uid://dp4qc3ow7c1gt" path="res://assets/gui/nitrous_bar_full.svg" id="6_apu4x"]
+[ext_resource type="Texture2D" uid="uid://biowo656qyw14" path="res://assets/sprites/keys/Keyboard_White_Arrow_Down.png" id="6_e1scy"]
+[ext_resource type="Texture2D" uid="uid://csxhxyk3levux" path="res://assets/sprites/keys/Keyboard_White_Arrow_Left.png" id="7_3k50y"]
+[ext_resource type="Texture2D" uid="uid://df7tqlqhs1b7q" path="res://assets/sprites/keys/Keyboard_White_Arrow_Right.png" id="8_8hsjs"]
+[ext_resource type="Texture2D" uid="uid://ncy77crvg6mq" path="res://assets/sprites/keys/Keyboard_White_Space.png" id="9_trhhp"]
+[ext_resource type="Texture2D" uid="uid://cl01ktxeulb6q" path="res://assets/sprites/keys/Keyboard_White_Ctrl.png" id="10_xo7ub"]
+
+[sub_resource type="Gradient" id="Gradient_dsfed"]
+offsets = PackedFloat32Array(0.974874, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_csfee"]
+gradient = SubResource("Gradient_dsfed")
+width = 80
+height = 80
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkaka"]
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_083dj"]
+font_size = 18
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Animation" id="Animation_jm6vj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HudMain/VBoxContainer/VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HudMain/VBoxContainer/VBoxContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_42lce"]
+resource_name = "new_animation"
+length = 15.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HudMain/VBoxContainer/VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 13, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HudMain/VBoxContainer/VBoxContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6khr1"]
+_data = {
+"RESET": SubResource("Animation_jm6vj"),
+"new_animation": SubResource("Animation_42lce")
+}
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_findq")
+
+[node name="HudMain" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_yjyur")
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HudMain"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HudMain/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_gyfmo")
+expand_mode = 3
+
+[node name="GPUParticles2D" parent="HudMain/VBoxContainer/HBoxContainer/TextureRect" instance=ExtResource("4_k55f3")]
+show_behind_parent = true
+position = Vector2(20, 20)
+scale = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/HBoxContainer/TextureRect"]
+show_behind_parent = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 43.0
+texture = SubResource("GradientTexture2D_csfee")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="HudMain/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(256, 35)
+layout_mode = 2
+
+[node name="ProgressBar" type="TextureProgressBar" parent="HudMain/VBoxContainer/HBoxContainer/Control2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -32.0
+offset_right = 256.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(256, 35)
+size_flags_vertical = 4
+max_value = 5.0
+step = 0.001
+value = 5.0
+texture_under = ExtResource("5_iohpg")
+texture_progress = ExtResource("6_apu4x")
+
+[node name="Control" type="Control" parent="HudMain/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScoreLabel" type="Label" parent="HudMain/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234"
+label_settings = SubResource("LabelSettings_xkaka")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HudMain/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HudMain/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_00pq3")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "ACCELERATE"
+label_settings = SubResource("LabelSettings_083dj")
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HudMain/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_e1scy")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "BRAKE/BACK"
+label_settings = SubResource("LabelSettings_083dj")
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HudMain/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("7_3k50y")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "TILT_LEFT"
+label_settings = SubResource("LabelSettings_083dj")
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HudMain/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("8_8hsjs")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "TILT_RIGHT"
+label_settings = SubResource("LabelSettings_083dj")
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HudMain/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("9_trhhp")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "HAND_BRAKE"
+label_settings = SubResource("LabelSettings_083dj")
+vertical_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="HudMain/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("10_xo7ub")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="HudMain/VBoxContainer/VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "NITROUS"
+label_settings = SubResource("LabelSettings_083dj")
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6khr1")
+}
+autoplay = "new_animation"

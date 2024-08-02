@@ -1,0 +1,160 @@
+[gd_scene load_steps=9 format=3 uid="uid://nr14eso61en7"]
+
+[ext_resource type="Script" path="res://gui/settings.gd" id="1_2gl3k"]
+[ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="1_ca0dn"]
+[ext_resource type="LabelSettings" uid="uid://gd3ybnas1xty" path="res://default_label_settings.tres" id="1_g7qo3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6pbh"]
+content_margin_bottom = 20.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_7jf2v"]
+font_size = 52
+font_color = Color(1, 1, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rycc6"]
+content_margin_left = 25.0
+content_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4hjrs"]
+content_margin_left = 25.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrphj"]
+content_margin_left = 25.0
+content_margin_bottom = 20.0
+
+[node name="GuiSettings" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ca0dn")
+script = ExtResource("1_2gl3k")
+
+[node name="Settings" type="VBoxContainer" parent="."]
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Settings"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m6pbh")
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_7jf2v")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Settings"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "AUDIO:"
+label_settings = ExtResource("1_g7qo3")
+
+[node name="PanelContainer" type="PanelContainer" parent="Settings"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rycc6")
+
+[node name="GridContainer" type="GridContainer" parent="Settings/PanelContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_constants/h_separation = 10
+columns = 2
+
+[node name="Label" type="Label" parent="Settings/PanelContainer/GridContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "FX:"
+label_settings = ExtResource("1_g7qo3")
+
+[node name="FXVolume" type="HSlider" parent="Settings/PanelContainer/GridContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="Label2" type="Label" parent="Settings/PanelContainer/GridContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "MUSIC:"
+label_settings = ExtResource("1_g7qo3")
+
+[node name="MusicVolume" type="HSlider" parent="Settings/PanelContainer/GridContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+
+[node name="Label2" type="Label" parent="Settings"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "GRAPHICS:"
+label_settings = ExtResource("1_g7qo3")
+
+[node name="FullScreenContainer" type="PanelContainer" parent="Settings"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4hjrs")
+
+[node name="FullScreenCheck" type="CheckButton" parent="Settings/FullScreenContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/FullScreenContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "FULL SCREEN"
+label_settings = ExtResource("1_g7qo3")
+vertical_alignment = 1
+
+[node name="HDRContainer" type="PanelContainer" parent="Settings"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wrphj")
+
+[node name="HDRCheck" type="CheckButton" parent="Settings/HDRContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/HDRContainer"]
+auto_translate_mode = 1
+layout_mode = 2
+text = "HDR"
+label_settings = ExtResource("1_g7qo3")
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="Settings"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "BACK"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="value_changed" from="Settings/PanelContainer/GridContainer/FXVolume" to="." method="_on_fx_volume_value_changed"]
+[connection signal="value_changed" from="Settings/PanelContainer/GridContainer/MusicVolume" to="." method="_on_music_volume_value_changed"]
+[connection signal="focus_entered" from="Settings/FullScreenContainer/FullScreenCheck" to="." method="_on_full_screen_check_focus_entered"]
+[connection signal="focus_exited" from="Settings/FullScreenContainer/FullScreenCheck" to="." method="_on_full_screen_check_focus_exited"]
+[connection signal="mouse_entered" from="Settings/FullScreenContainer/FullScreenCheck" to="." method="_on_full_screen_check_mouse_entered"]
+[connection signal="mouse_exited" from="Settings/FullScreenContainer/FullScreenCheck" to="." method="_on_full_screen_check_mouse_exited"]
+[connection signal="toggled" from="Settings/FullScreenContainer/FullScreenCheck" to="." method="_on_full_screen_check_toggled"]
+[connection signal="focus_entered" from="Settings/HDRContainer/HDRCheck" to="." method="_on_hdr_check_focus_entered"]
+[connection signal="focus_exited" from="Settings/HDRContainer/HDRCheck" to="." method="_on_hdr_check_focus_exited"]
+[connection signal="mouse_entered" from="Settings/HDRContainer/HDRCheck" to="." method="_on_hdr_check_mouse_entered"]
+[connection signal="mouse_exited" from="Settings/HDRContainer/HDRCheck" to="." method="_on_hdr_check_mouse_exited"]
+[connection signal="toggled" from="Settings/HDRContainer/HDRCheck" to="." method="_on_hdr_check_toggled"]
+[connection signal="pressed" from="Settings/BackButton" to="." method="_on_back_button_pressed"]

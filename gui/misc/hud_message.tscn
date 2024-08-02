@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://csjtfad4sgn11"]
+
+[ext_resource type="Script" path="res://gui/misc/hud_message.gd" id="1_mgqk4"]
+[ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="2_7ld7v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_duvj8"]
+font_size = 32
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nyrpx"]
+font_size = 32
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="HUDMessage" type="Node2D"]
+script = ExtResource("1_mgqk4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -72.0
+offset_top = -39.0
+offset_right = -32.0
+offset_bottom = 1.0
+theme = ExtResource("2_7ld7v")
+
+[node name="TitleLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 45.0
+text = "Title"
+label_settings = SubResource("LabelSettings_duvj8")
+
+[node name="MsgLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 42.0
+offset_right = 102.0
+offset_bottom = 87.0
+text = "Message"
+label_settings = SubResource("LabelSettings_nyrpx")
+
+[node name="LifeTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

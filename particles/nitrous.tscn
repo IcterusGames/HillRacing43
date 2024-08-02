@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfyc8hpvibfg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_btnoc"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_233c0"]
+offsets = PackedFloat32Array(0, 0.323353, 1)
+colors = PackedColorArray(0.270588, 0.596078, 1, 1, 0.458824, 0.117647, 1, 1, 0.972549, 0.211765, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f3xeu"]
+gradient = SubResource("Gradient_233c0")
+
+[sub_resource type="Curve" id="Curve_btda4"]
+_data = [Vector2(0, 1), 0.0, -0.227964, 0, 0, Vector2(1, 0.274725), -1.54762, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_o6rwx"]
+curve = SubResource("Curve_btda4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ckqjw"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 7.0
+direction = Vector3(-1, 0, 0)
+spread = 3.0
+initial_velocity_min = 350.0
+initial_velocity_max = 450.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.4
+scale_curve = SubResource("CurveTexture_o6rwx")
+color_ramp = SubResource("GradientTexture1D_f3xeu")
+
+[sub_resource type="Gradient" id="Gradient_v6uaf"]
+offsets = PackedFloat32Array(0, 0.633166, 1)
+colors = PackedColorArray(1, 1, 2.00392, 1, 0, 0.364706, 2.00392, 1, 0, 0.364706, 2.00392, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xeb65"]
+gradient = SubResource("Gradient_v6uaf")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[node name="Nitrous" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_btnoc")
+emitting = false
+amount = 128
+process_material = SubResource("ParticleProcessMaterial_ckqjw")
+texture = SubResource("GradientTexture2D_xeb65")
+lifetime = 0.25
+interpolate = false
+local_coords = true

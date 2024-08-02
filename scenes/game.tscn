@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx7qyeu2smnh8"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_3qpfd"]
+[ext_resource type="PackedScene" uid="uid://dqj65luqyqcwo" path="res://gui/hud.tscn" id="2_fp2t8"]
+[ext_resource type="PackedScene" uid="uid://c1lrcqch251yx" path="res://scenes/parallax.tscn" id="3_uoun7"]
+[ext_resource type="PackedScene" uid="uid://dkiv07k4mxnfw" path="res://scenes/car.tscn" id="8_j611u"]
+[ext_resource type="PackedScene" uid="uid://ojsfmtb70yhp" path="res://scenes/terrain.tscn" id="9_cdj1n"]
+
+[sub_resource type="Environment" id="Environment_mmdvp"]
+background_mode = 3
+glow_enabled = true
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_3qpfd")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mmdvp")
+
+[node name="HUD" parent="." instance=ExtResource("2_fp2t8")]
+
+[node name="Parallax" parent="." instance=ExtResource("3_uoun7")]
+
+[node name="Terrain" parent="." instance=ExtResource("9_cdj1n")]
+position = Vector2(0, -1)
+slope = 0.0
+
+[node name="Car" parent="." instance=ExtResource("8_j611u")]
+position = Vector2(244, 144)
+
+[connection signal="backflip_performed" from="Car" to="HUD" method="_on_car_backflip_performed"]
+[connection signal="jump_landed" from="Car" to="HUD" method="_on_car_jump_landed"]
+[connection signal="jump_scored" from="Car" to="HUD" method="_on_car_jump_scored"]

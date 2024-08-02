@@ -1,0 +1,256 @@
+[gd_scene load_steps=8 format=3 uid="uid://27c4kayk776w"]
+
+[ext_resource type="Texture2D" uid="uid://baw6qyi5v4wq0" path="res://assets/sprites/grain.svg" id="1_rltoe"]
+[ext_resource type="Script" path="res://scenes/planes/farm.gd" id="1_vgqin"]
+[ext_resource type="Texture2D" uid="uid://doffqub61q7j1" path="res://assets/sprites/scarecrow.svg" id="2_grod7"]
+[ext_resource type="Texture2D" uid="uid://chofj6uxvbbhf" path="res://assets/sprites/barn.svg" id="2_uvy3t"]
+[ext_resource type="Texture2D" uid="uid://siav7emjwyyj" path="res://assets/sprites/fence.svg" id="4_ej8dm"]
+[ext_resource type="Texture2D" uid="uid://b1fk47jwwhqq4" path="res://assets/sprites/fence_end.svg" id="5_el3fq"]
+[ext_resource type="Texture2D" uid="uid://bc1y0xydonm8s" path="res://assets/sprites/fence_broken_right.svg" id="6_gywmp"]
+
+[node name="Farm" type="Node2D"]
+script = ExtResource("1_vgqin")
+
+[node name="Grain" type="Node2D" parent="."]
+
+[node name="Barn" type="Sprite2D" parent="Grain"]
+position = Vector2(-365, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_uvy3t")
+offset = Vector2(0, -512)
+
+[node name="Scarecrow" type="Sprite2D" parent="Grain"]
+position = Vector2(-1449, 0)
+rotation = 0.0785398
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_grod7")
+offset = Vector2(0, -384)
+
+[node name="Scarecrow2" type="Sprite2D" parent="Grain"]
+position = Vector2(582, 0)
+rotation = -0.1309
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_grod7")
+offset = Vector2(0, -384)
+
+[node name="Grain" type="Sprite2D" parent="Grain"]
+position = Vector2(-2225, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain2" type="Sprite2D" parent="Grain"]
+position = Vector2(-2074, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain3" type="Sprite2D" parent="Grain"]
+position = Vector2(-1924, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain4" type="Sprite2D" parent="Grain"]
+position = Vector2(-1773, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain5" type="Sprite2D" parent="Grain"]
+position = Vector2(-1623, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain6" type="Sprite2D" parent="Grain"]
+position = Vector2(-1472.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain7" type="Sprite2D" parent="Grain"]
+position = Vector2(-1321.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain8" type="Sprite2D" parent="Grain"]
+position = Vector2(-1171.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain9" type="Sprite2D" parent="Grain"]
+position = Vector2(-1020.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain10" type="Sprite2D" parent="Grain"]
+position = Vector2(-870.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain11" type="Sprite2D" parent="Grain"]
+position = Vector2(-719.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain12" type="Sprite2D" parent="Grain"]
+position = Vector2(-568.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain13" type="Sprite2D" parent="Grain"]
+position = Vector2(-418.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain14" type="Sprite2D" parent="Grain"]
+position = Vector2(-267.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain15" type="Sprite2D" parent="Grain"]
+position = Vector2(-117.2, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain16" type="Sprite2D" parent="Grain"]
+position = Vector2(33.8, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain17" type="Sprite2D" parent="Grain"]
+position = Vector2(184.8, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain18" type="Sprite2D" parent="Grain"]
+position = Vector2(334.8, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain19" type="Sprite2D" parent="Grain"]
+position = Vector2(485.8, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain20" type="Sprite2D" parent="Grain"]
+position = Vector2(635.8, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain21" type="Sprite2D" parent="Grain"]
+position = Vector2(786.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain22" type="Sprite2D" parent="Grain"]
+position = Vector2(937.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain23" type="Sprite2D" parent="Grain"]
+position = Vector2(1087.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain24" type="Sprite2D" parent="Grain"]
+position = Vector2(1238.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain25" type="Sprite2D" parent="Grain"]
+position = Vector2(1388.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain26" type="Sprite2D" parent="Grain"]
+position = Vector2(1539.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain27" type="Sprite2D" parent="Grain"]
+position = Vector2(1690.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain28" type="Sprite2D" parent="Grain"]
+position = Vector2(1840.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain29" type="Sprite2D" parent="Grain"]
+position = Vector2(1991.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="Grain30" type="Sprite2D" parent="Grain"]
+position = Vector2(2141.6, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rltoe")
+offset = Vector2(0, -256)
+
+[node name="FenceEnd" type="Sprite2D" parent="Grain"]
+position = Vector2(-1664, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_el3fq")
+offset = Vector2(0, -256)
+
+[node name="Fence2" type="Sprite2D" parent="Grain"]
+position = Vector2(-1888, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_ej8dm")
+offset = Vector2(0, -256)
+
+[node name="Fence" type="Sprite2D" parent="Grain"]
+position = Vector2(-2183, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_ej8dm")
+offset = Vector2(0, -256)
+
+[node name="FenceEnd2" type="Sprite2D" parent="Grain"]
+position = Vector2(2162, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_el3fq")
+offset = Vector2(0, -256)
+
+[node name="Fence3" type="Sprite2D" parent="Grain"]
+position = Vector2(1939, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_ej8dm")
+offset = Vector2(0, -256)
+
+[node name="Fence4" type="Sprite2D" parent="Grain"]
+position = Vector2(1646, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_ej8dm")
+offset = Vector2(0, -256)
+
+[node name="FenceBrokenRight" type="Sprite2D" parent="Grain"]
+position = Vector2(1350, 0)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_gywmp")
+offset = Vector2(0, -256)

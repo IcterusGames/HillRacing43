@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1lrcqch251yx"]
+
+[ext_resource type="Texture2D" uid="uid://b3wgas8kop7tg" path="res://assets/parallax/01.png" id="1_jplab"]
+[ext_resource type="Texture2D" uid="uid://dwp1m7n66l6mh" path="res://assets/parallax/02.png" id="2_he0j8"]
+[ext_resource type="Texture2D" uid="uid://bar2ivbel2xio" path="res://assets/parallax/03.png" id="3_5f07m"]
+[ext_resource type="Texture2D" uid="uid://8qwe1n430wob" path="res://assets/parallax/04.png" id="4_g8m2y"]
+[ext_resource type="Texture2D" uid="uid://cmw1pribicitt" path="res://assets/parallax/05.png" id="5_h27wd"]
+[ext_resource type="Texture2D" uid="uid://bh681cgdaw8sn" path="res://assets/parallax/06.png" id="6_bd7au"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.05, 0.05)
+repeat_size = Vector2(2048, 1536)
+autoscroll = Vector2(-5, 0)
+repeat_times = 3
+
+[node name="01" type="Sprite2D" parent="Parallax2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jplab")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(2048, 0)
+repeat_times = 3
+limit_end = Vector2(1e+07, 5000)
+
+[node name="02" type="Sprite2D" parent="Parallax2D2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_he0j8")
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D2"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2048, 2048)
+offset_left = -1024.0
+offset_top = 300.0
+offset_right = 1024.0
+offset_bottom = 2348.0
+color = Color(0.592157, 0.945098, 0.8, 1)
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.15, 0.15)
+repeat_size = Vector2(2048, 0)
+repeat_times = 3
+limit_end = Vector2(1e+07, 5000)
+
+[node name="03" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(0, 342)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5f07m")
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D3"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2048, 2048)
+offset_left = -1024.0
+offset_top = 550.0
+offset_right = 1024.0
+offset_bottom = 2598.0
+color = Color(0.556863, 0.941176, 0.756863, 1)
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.17, 0.17)
+repeat_size = Vector2(2048, 0)
+repeat_times = 3
+limit_end = Vector2(1e+07, 5000)
+
+[node name="04" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(0, 413)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_g8m2y")
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D4"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2048, 2048)
+offset_left = -1024.0
+offset_top = 700.0
+offset_right = 1024.0
+offset_bottom = 2748.0
+color = Color(0.4, 0.882353, 0.52549, 1)
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.25, 0.25)
+repeat_size = Vector2(2048, 0)
+repeat_times = 3
+limit_end = Vector2(1e+07, 5000)
+
+[node name="05" type="Sprite2D" parent="Parallax2D5"]
+position = Vector2(0, 700)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_h27wd")
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(2048, 0)
+repeat_times = 3
+limit_end = Vector2(1e+07, 5000)
+
+[node name="06" type="Sprite2D" parent="Parallax2D6"]
+position = Vector2(0, 950)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bd7au")
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D6"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(2048, 2048)
+offset_left = -1024.0
+offset_top = 1200.0
+offset_right = 1024.0
+offset_bottom = 3248.0
+color = Color(0.411765, 0.87451, 0.537255, 1)
