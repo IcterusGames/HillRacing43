@@ -145,7 +145,7 @@ theme_override_constants/separation = 0
 metadata/_tab_index = 0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/TabContainer/MainMenu"]
-custom_minimum_size = Vector2(0, 256)
+custom_minimum_size = Vector2(0, 320)
 layout_mode = 2
 texture = ExtResource("3_l3i2j")
 expand_mode = 1

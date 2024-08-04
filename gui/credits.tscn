@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://crsba2elk6qyu"]
+[gd_scene load_steps=6 format=3 uid="uid://crsba2elk6qyu"]
 
 [ext_resource type="Theme" uid="uid://iglcheijqvq" path="res://default_theme.tres" id="1_61us3"]
 [ext_resource type="Script" path="res://gui/credits.gd" id="2_0olgl"]
@@ -20,6 +20,8 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gymjf"]
+
 [node name="GuiCredits" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +42,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1pi2j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -48,9 +50,7 @@ size_flags_horizontal = 3
 theme_override_fonts/normal_font = ExtResource("2_x6v23")
 theme_override_font_sizes/normal_font_size = 14
 bbcode_enabled = true
-text = "[center][img=256]res://assets/title.svg[/img]
-[font size=12]v 1.0.0[/font]
-A game for TodoGodot[/center]"
+text = "[center][img=256]res://assets/title.svg[/img][/center]"
 fit_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
@@ -105,6 +105,11 @@ text = "[center][font size=14]This game was created for:[/font]
 [/center]"
 fit_content = true
 
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gymjf")
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 
@@ -130,6 +135,16 @@ text = "[center][font size=14]Music and FX:[/font]
 [font size=12][url]https://freesound.org[/url][/font][/center]"
 fit_content = true
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("2_x6v23")
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[center][font size=14]A game for TodoGodot[/font]
+[font size=12]v 1.0.0[/font][/center]"
+fit_content = true
+
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
@@ -143,4 +158,5 @@ text = "BACK"
 [connection signal="meta_clicked" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/RichTextLabel2" to="." method="_on_rich_text_label_meta_clicked"]
 [connection signal="meta_clicked" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
 [connection signal="meta_clicked" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/RichTextLabel2" to="." method="_on_rich_text_label_meta_clicked"]
+[connection signal="meta_clicked" from="VBoxContainer/PanelContainer/VBoxContainer/RichTextLabel2" to="." method="_on_rich_text_label_meta_clicked"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
