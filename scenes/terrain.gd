@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node2D
 
 const SECTION_POINTS := 100
@@ -39,12 +39,12 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var pos := 0.0
-	if Engine.is_editor_hint():
-		var trans := EditorInterface.get_editor_viewport_2d().global_canvas_transform
-		pos = -trans.origin.x
-		pos /= trans.get_scale().x
-	else:
-		pos = get_viewport().get_camera_2d().global_position.x
+	#if Engine.is_editor_hint():
+		#var trans := EditorInterface.get_editor_viewport_2d().global_canvas_transform
+		#pos = -trans.origin.x
+		#pos /= trans.get_scale().x
+	#else:
+	pos = get_viewport().get_camera_2d().global_position.x
 	var sec := floori(pos / (SECTION_POINTS * POINT_SIZE))
 	if sec != _section:
 		_section = sec
