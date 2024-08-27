@@ -1,10 +1,10 @@
- ,en,es
-PLAY,Play,Jugar
+ ,en,es,de
+PLAY,Play,Jugar,Play
 CREDITS,Credits,Créditos
-SETTINGS,Settings,Ajustes
-EXIT,Exit,Salir
-AUDIO:,Audio:,Audio:
-FX:,FX:,FX:
+SETTINGS,Settings,Ajustes,Einstellungen
+EXIT,Exit,Salir,Beenden
+AUDIO:,Audio:,Audio:,Audio:
+FX:,FX:,FX:,FX:
 MUSIC:,Music:,Música:
 GRAPHICS:,Graphics:,Gráficos:
 FULL SCREEN,Full screen,Pantalla completa
