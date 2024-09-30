@@ -11,6 +11,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	play_button.text = tr("PLAY")
+	credits_button.text=tr("CREDITS")
 	car.position.y = terrain.get_position_y(car.position.x) - 150
 	play_button.grab_focus()
 
