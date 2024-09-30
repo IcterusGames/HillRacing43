@@ -95,7 +95,7 @@ ui_joy_down={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translations/translations.csv")
+locale/translations=PackedStringArray("res://translations/translations.de.translation", "res://translations/translations.en.translation", "res://translations/translations.es.translation")
 
 [layer_names]
 
