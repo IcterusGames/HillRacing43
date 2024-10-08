@@ -1,30 +1,30 @@
- ,en,es
-PLAY,Play,Jugar
-CREDITS,Credits,Créditos
-SETTINGS,Settings,Ajustes
-EXIT,Exit,Salir
-AUDIO:,Audio:,Audio:
-FX:,FX:,FX:
-MUSIC:,Music:,Música:
-GRAPHICS:,Graphics:,Gráficos:
-FULL SCREEN,Full screen,Pantalla completa
-BACK,Back,Volver
-PAUSE,PAUSED,PAUSA
-RESUME,Resume,Reanudar
-SURRENDER,Surrender,Rendirse
-JUMP,Jump,Salto
-BACKFLIP,Backflip,Voltereta
-GAME OVER,GAME OVER,GAME OVER
-DISTANCE:,Distance:,Distancia:
-COINS:,Coins:,Monedas:
-JUMPS:,Jumps:,Saltos:
-BACKFLIPS:,Backflips:,Volteretas:
-YOUR SCORE:,Your score:,Tu puntuación:
-SCORE,Score,Puntos
-RETRY,Retry,Reintentar
-ACCELERATE,Accelerate,Acelerar
-BRAKE/BACK,Brake/Back,Fremar/Atrás
-TILT_LEFT,Tilt left,Inclinar izquierda
-TILT_RIGHT,Tilt right,Inclinar derecha
-HAND_BRAKE,Handbrake,Freno de mano
-NITROUS,Nitrous,Nitro
+ ,en,es,de
+PLAY,Play,Jugar,Spielen
+CREDITS,Credits,Créditos,Credits
+SETTINGS,Settings,Ajustes,Einstellungen
+EXIT,Exit,Salir,Beenden
+AUDIO:,Audio:,Audio:,Audio:
+FX:,FX:,FX:,FX:
+MUSIC:,Music:,Música:,Musik:
+GRAPHICS:,Graphics:,Gráficos:,Grafik:
+FULL SCREEN,Full screen,Pantalla completa,Vollbild
+BACK,Back,Volver,Zurück
+PAUSE,PAUSED,PAUSA,Pausiert
+RESUME,Resume,Reanudar,Weiter
+SURRENDER,Surrender,Rendirse,Aufgeben
+JUMP,Jump,Salto,Springen
+BACKFLIP,Backflip,Voltereta,Rückwärtzsalto
+GAME OVER,GAME OVER,GAME OVER,GAME OVER
+DISTANCE:,Distance:,Distancia:,Distanz:
+COINS:,Coins:,Monedas:,Münzen:
+JUMPS:,Jumps:,Saltos:,Sprünge:
+BACKFLIPS:,Backflips:,Volteretas:,Rückwärtssalto:
+YOUR SCORE:,Your score:,Tu puntuación:,Dein Score:
+SCORE,Score,Puntos,Punktzahl
+RETRY,Retry,Reintentar,Wiederholen
+ACCELERATE,Accelerate,Acelerar,Beschleunigen
+BRAKE/BACK,Brake/Back,Fremar/Atrás,Bremse/Rücken
+TILT_LEFT,Tilt left,Inclinar izquierda,Nach links neigen
+TILT_RIGHT,Tilt right,Inclinar derecha,Nach rechts neigen
+HAND_BRAKE,Handbrake,Freno de mano,Handbremse
+NITROUS,Nitrous,Nitro,Nitro
